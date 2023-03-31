@@ -44,8 +44,7 @@ export default function Home() {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization:
-              "Bearer " + "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",
+            Authorization: "Bearer " + process.env.APIKEY,
           },
         }
       )
