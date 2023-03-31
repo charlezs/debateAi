@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import axios from "axios";
-import { View } from "react-native";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
