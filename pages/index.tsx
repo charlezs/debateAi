@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Center>
+      <Center px="10">
         <HStack direction="row" h="90vh" gap="100px">
           <Container>
             <VStack gap="50px" direction="column">
@@ -62,7 +62,7 @@ export default function Home() {
               </Heading>
             </Box>
             <Center mt="40px">
-              <NextLink href="/createmap">
+              <NextLink href="/debate">
                 <Button bg="black" color="white" size="lg">
                   {" "}
                   Deb(Ai)te It
@@ -71,7 +71,7 @@ export default function Home() {
             </Center>
           </Container>
           <Box>
-            <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" w="" />
+            <Image src="./edit.png" alt="Dan Abramov" w="100%" />
           </Box>
         </HStack>
       </Center>
