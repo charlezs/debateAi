@@ -30,9 +30,9 @@ export default function Home() {
   const returnResults = async () => {
     setIsLoading(true);
     const prompt =
-      "You are an Ivy League University professor and your specialty is to encourage a fair and balanced debate. You are mediating a debate between Mr.X and Mr.Y. Furthermore, you will play the part of Mr.X, Mr.Y and the professor in your responses. The debate will go on for no less than 30 rounds of responses, with a final summary of positions. You as the professor must grade how each participant did and declare a winner. Person A and Person B are passionate about their positions they will be defending, and as the professor, it is your job to keep the debate on point. The debate will be on:" +
+      "You are an Ivy League University professor and your specialty is to encourage a fair and balanced debate. You are mediating a debate between Mr.X and Mr.Y. Furthermore, you will play the part of Mr.X, Mr.Y and the professor in your responses. The debate will go on for 3 responses, with a final summary of positions. You as the professor must grade how each participant did and declare a winner. Mr.X and Mr.Y are passionate about their positions they will be defending, and as the professor, it is your job to keep the debate on point. The debate will be on:" +
       learn +
-      ". When the debate is over say, this brings an end to the debate, thank you for listening!";
+      ". When the debate is over say, this brings an end to the debate, thank you for listening! Lastly make sure that your responses to each side are creative and not repetitive.";
     gptPostClient
       .post(
         "",
@@ -55,7 +55,7 @@ export default function Home() {
       });
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 7000);
   };
 
   return (
@@ -69,7 +69,7 @@ export default function Home() {
       <Center>
         <VStack w="5xl" h="100vh" gap="50px">
           <Heading fontSize="30px" mt="10">
-            Two sides, Person A and Person B, vigorously debate the question:
+            Two sides, Mr. X and Mr. Y. vigorously debate the question:
           </Heading>
           <FormControl id="prompt" fontSize={"2xl"}>
             <Box>
@@ -91,6 +91,10 @@ export default function Home() {
             p="20px"
             onClick={returnResults}
             isLoading={isLoading}
+            _hover={{
+              background: "white",
+              color: "red",
+            }}
           >
             {" "}
             Load Debate

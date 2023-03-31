@@ -15,9 +15,9 @@ export const Navigation = () => {
               width="6xl"
             >
               <NextLink href="/">
-                <Heading>DebAIte</Heading>
+                <Heading>DEB(AI)TE</Heading>
               </NextLink>
-              <Icon boxSize={6} as={GiPublicSpeaker} />
+              <Icon boxSize={10} as={GiPublicSpeaker} />
             </Flex>
           </Center>
         </Box>
