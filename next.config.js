@@ -5,7 +5,7 @@ const nextConfig = {
 
 module.exports = {
   env: {
-    APIKEY: process.env.OPEN_AI_API_KEY,
+    APIKEY: process.env.APIKEY,
   },
   nextConfig,
 };
